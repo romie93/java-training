@@ -1,0 +1,316 @@
+Microsoft Windows [Version 10.0.16299.192]
+(c) 2017 Microsoft Corporation. All rights reserved.
+
+C:\Users\CloudIT>cd \
+
+C:\>cd mysql
+
+C:\mysql>cd mysql-5.7.21-winx64
+
+C:\mysql\mysql-5.7.21-winx64>cd bin
+
+C:\mysql\mysql-5.7.21-winx64\bin>dir
+ Volume in drive C has no label.
+ Volume Serial Number is E0B4-A6FD
+
+ Directory of C:\mysql\mysql-5.7.21-winx64\bin
+
+12/02/2018  10:20 AM    <DIR>          .
+12/02/2018  10:20 AM    <DIR>          ..
+09/02/2018  07:52 PM            23,552 echo.exe
+09/02/2018  07:52 PM         4,829,696 innochecksum.exe
+09/02/2018  07:52 PM         1,839,616 libmecab.dll
+09/02/2018  07:52 PM           107,008 lz4_decompress.exe
+09/02/2018  07:52 PM         4,708,864 myisamchk.exe
+09/02/2018  07:52 PM         4,542,976 myisamlog.exe
+09/02/2018  07:52 PM         4,619,264 myisampack.exe
+09/02/2018  07:52 PM         4,594,176 myisam_ftdump.exe
+09/02/2018  07:52 PM         5,076,480 mysql.exe
+09/02/2018  07:52 PM         4,959,744 mysqladmin.exe
+09/02/2018  07:52 PM         5,253,632 mysqlbinlog.exe
+09/02/2018  07:52 PM         4,988,416 mysqlcheck.exe
+09/02/2018  07:52 PM        39,551,488 mysqld.exe
+09/02/2018  07:52 PM       170,225,664 mysqld.pdb
+09/02/2018  07:52 PM         5,028,864 mysqldump.exe
+09/02/2018  07:52 PM             7,675 mysqldumpslow.pl
+09/02/2018  07:52 PM            27,932 mysqld_multi.pl
+09/02/2018  07:52 PM         4,949,504 mysqlimport.exe
+09/02/2018  07:52 PM         5,699,584 mysqlpump.exe
+09/02/2018  07:52 PM         4,946,432 mysqlshow.exe
+09/02/2018  07:52 PM         4,968,448 mysqlslap.exe
+09/02/2018  07:52 PM        24,913,920 mysqltest_embedded.exe
+09/02/2018  07:52 PM         7,362,560 mysqlxtest.exe
+09/02/2018  07:52 PM        25,175,040 mysql_client_test_embedded.exe
+09/02/2018  07:52 PM             7,245 mysql_config.pl
+09/02/2018  07:52 PM         4,703,744 mysql_config_editor.exe
+09/02/2018  07:52 PM        24,722,944 mysql_embedded.exe
+09/02/2018  07:52 PM         4,304,896 mysql_plugin.exe
+09/02/2018  07:52 PM         4,944,384 mysql_secure_installation.exe
+09/02/2018  07:52 PM         4,374,528 mysql_ssl_rsa_setup.exe
+09/02/2018  07:52 PM         4,228,096 mysql_tzinfo_to_sql.exe
+09/02/2018  07:52 PM         5,765,632 mysql_upgrade.exe
+09/02/2018  07:52 PM         4,290,048 my_print_defaults.exe
+09/02/2018  07:52 PM         4,459,520 perror.exe
+09/02/2018  07:52 PM         4,239,360 replace.exe
+09/02/2018  07:52 PM         4,288,512 resolveip.exe
+09/02/2018  07:52 PM            58,880 zlib_decompress.exe
+              37 File(s)    408,788,324 bytes
+               2 Dir(s)  709,836,685,312 bytes free
+
+C:\mysql\mysql-5.7.21-winx64\bin>mysqld
+
+C:\mysql\mysql-5.7.21-winx64\bin>mysql -u myuser -p
+Enter password: ****
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 9
+Server version: 5.7.21-log MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| emp                |
+| mysql              |
+| performance_schema |
+| sakila             |
+| sys                |
+| world              |
++--------------------+
+7 rows in set (0.00 sec)
+
+mysql> use emp;
+Database changed
+mysql> select * from employees;
++-----+-----+------------+-----------+
+| id  | age | first      | last      |
++-----+-----+------------+-----------+
+| 101 |  25 | Mahnaz     | Fatma     |
+| 102 |  30 | Zaid       | Khan      |
+| 103 |  28 | Sumit      | Mittal    |
+| 104 |  18 | Gopinathan | Munappy   |
+| 105 |  24 | Romie      | Tingkorou |
+| 106 |  20 | Julia      | Timakova  |
++-----+-----+------------+-----------+
+6 rows in set (0.00 sec)
+
+mysql> insert into employees values (100, 21, 'Zara', 'Ali');
+Query OK, 1 row affected (0.08 sec)
+
+mysql> insert into employees values (107, 22, 'Intan', 'Shafinaz');
+Query OK, 1 row affected (0.08 sec)
+
+mysql> select * from employees;
++-----+-----+------------+-----------+
+| id  | age | first      | last      |
++-----+-----+------------+-----------+
+| 101 |  25 | Mahnaz     | Fatma     |
+| 102 |  30 | Zaid       | Khan      |
+| 103 |  28 | Sumit      | Mittal    |
+| 104 |  18 | Gopinathan | Munappy   |
+| 105 |  24 | Romie      | Tingkorou |
+| 106 |  20 | Julia      | Timakova  |
+| 100 |  21 | Zara       | Ali       |
+| 107 |  22 | Intan      | Shafinaz  |
++-----+-----+------------+-----------+
+8 rows in set (0.00 sec)
+
+mysql> select count(*) from employees;
++----------+
+| count(*) |
++----------+
+|        8 |
++----------+
+1 row in set (0.05 sec)
+
+mysql> insert into employees values (108, 40, 'Nahid', 'Reza');
+Query OK, 1 row affected (0.06 sec)
+
+mysql> insert into employees values (108, 35, 'Musa', 'Abdullah');
+Query OK, 1 row affected (0.05 sec)
+
+mysql> select * from employees;
++-----+-----+------------+-----------+
+| id  | age | first      | last      |
++-----+-----+------------+-----------+
+| 101 |  25 | Mahnaz     | Fatma     |
+| 102 |  30 | Zaid       | Khan      |
+| 103 |  28 | Sumit      | Mittal    |
+| 104 |  18 | Gopinathan | Munappy   |
+| 105 |  24 | Romie      | Tingkorou |
+| 106 |  20 | Julia      | Timakova  |
+| 100 |  21 | Zara       | Ali       |
+| 107 |  22 | Intan      | Shafinaz  |
+| 108 |  40 | Nahid      | Reza      |
+| 108 |  35 | Musa       | Abdullah  |
++-----+-----+------------+-----------+
+10 rows in set (0.00 sec)
+
+mysql> select *  from employees where age > 25;
++-----+-----+-------+----------+
+| id  | age | first | last     |
++-----+-----+-------+----------+
+| 102 |  30 | Zaid  | Khan     |
+| 103 |  28 | Sumit | Mittal   |
+| 108 |  40 | Nahid | Reza     |
+| 108 |  35 | Musa  | Abdullah |
++-----+-----+-------+----------+
+4 rows in set (0.00 sec)
+
+mysql> select *  from employees where age > 30;
++-----+-----+-------+----------+
+| id  | age | first | last     |
++-----+-----+-------+----------+
+| 108 |  40 | Nahid | Reza     |
+| 108 |  35 | Musa  | Abdullah |
++-----+-----+-------+----------+
+2 rows in set (0.00 sec)
+
+mysql> select *  from employees where age < 30;
++-----+-----+------------+-----------+
+| id  | age | first      | last      |
++-----+-----+------------+-----------+
+| 101 |  25 | Mahnaz     | Fatma     |
+| 103 |  28 | Sumit      | Mittal    |
+| 104 |  18 | Gopinathan | Munappy   |
+| 105 |  24 | Romie      | Tingkorou |
+| 106 |  20 | Julia      | Timakova  |
+| 100 |  21 | Zara       | Ali       |
+| 107 |  22 | Intan      | Shafinaz  |
++-----+-----+------------+-----------+
+7 rows in set (0.00 sec)
+
+mysql> select *  from employees where age < 15;
+Empty set (0.00 sec)
+
+mysql> select * from employees;
++-----+-----+------------+-----------+
+| id  | age | first      | last      |
++-----+-----+------------+-----------+
+| 101 |  25 | Mahnaz     | Fatma     |
+| 102 |  30 | Zaid       | Khan      |
+| 103 |  28 | Sumit      | Mittal    |
+| 104 |  18 | Gopinathan | Munappy   |
+| 105 |  24 | Romie      | Tingkorou |
+| 106 |  20 | Julia      | Timakova  |
+| 100 |  21 | Zara       | Ali       |
+| 107 |  22 | Intan      | Shafinaz  |
+| 108 |  40 | Nahid      | Reza      |
+| 108 |  35 | Musa       | Abdullah  |
++-----+-----+------------+-----------+
+10 rows in set (0.00 sec)
+
+mysql> delete from employees where id = 108;
+Query OK, 2 rows affected (0.08 sec)
+
+mysql> delete from employees where id = 100;
+Query OK, 1 row affected (0.06 sec)
+
+mysql> select * from employees;
++-----+-----+------------+-----------+
+| id  | age | first      | last      |
++-----+-----+------------+-----------+
+| 101 |  25 | Mahnaz     | Fatma     |
+| 102 |  30 | Zaid       | Khan      |
+| 103 |  28 | Sumit      | Mittal    |
+| 104 |  18 | Gopinathan | Munappy   |
+| 105 |  24 | Romie      | Tingkorou |
+| 106 |  20 | Julia      | Timakova  |
+| 107 |  22 | Intan      | Shafinaz  |
++-----+-----+------------+-----------+
+7 rows in set (0.00 sec)
+
+mysql> insert into employees values (108, 40, 'Nahid', 'Reza');
+Query OK, 1 row affected (0.06 sec)
+
+mysql> insert into employees values (109, 35, 'Musa', 'Abdullah');
+Query OK, 1 row affected (0.06 sec)
+
+mysql> insert into employees values (110, 21, 'Zara', 'Ali');
+Query OK, 1 row affected (0.05 sec)
+
+mysql> select * from employees;
++-----+-----+------------+-----------+
+| id  | age | first      | last      |
++-----+-----+------------+-----------+
+| 101 |  25 | Mahnaz     | Fatma     |
+| 102 |  30 | Zaid       | Khan      |
+| 103 |  28 | Sumit      | Mittal    |
+| 104 |  18 | Gopinathan | Munappy   |
+| 105 |  24 | Romie      | Tingkorou |
+| 106 |  20 | Julia      | Timakova  |
+| 107 |  22 | Intan      | Shafinaz  |
+| 108 |  40 | Nahid      | Reza      |
+| 109 |  35 | Musa       | Abdullah  |
+| 110 |  21 | Zara       | Ali       |
++-----+-----+------------+-----------+
+10 rows in set (0.00 sec)
+
+mysql> select *  from employees where age > 30;
++-----+-----+-------+----------+
+| id  | age | first | last     |
++-----+-----+-------+----------+
+| 108 |  40 | Nahid | Reza     |
+| 109 |  35 | Musa  | Abdullah |
++-----+-----+-------+----------+
+2 rows in set (0.00 sec)
+
+mysql> select *  from employees where age > 25;
++-----+-----+-------+----------+
+| id  | age | first | last     |
++-----+-----+-------+----------+
+| 102 |  30 | Zaid  | Khan     |
+| 103 |  28 | Sumit | Mittal   |
+| 108 |  40 | Nahid | Reza     |
+| 109 |  35 | Musa  | Abdullah |
++-----+-----+-------+----------+
+4 rows in set (0.00 sec)
+
+mysql> select *  from employees where age < 30;
++-----+-----+------------+-----------+
+| id  | age | first      | last      |
++-----+-----+------------+-----------+
+| 101 |  25 | Mahnaz     | Fatma     |
+| 103 |  28 | Sumit      | Mittal    |
+| 104 |  18 | Gopinathan | Munappy   |
+| 105 |  24 | Romie      | Tingkorou |
+| 106 |  20 | Julia      | Timakova  |
+| 107 |  22 | Intan      | Shafinaz  |
+| 110 |  21 | Zara       | Ali       |
++-----+-----+------------+-----------+
+7 rows in set (0.00 sec)
+
+mysql> select count(*) from employees;
++----------+
+| count(*) |
++----------+
+|       10 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> select * from employees;
++-----+-----+------------+-----------+
+| id  | age | first      | last      |
++-----+-----+------------+-----------+
+| 101 |  25 | Mahnaz     | Fatma     |
+| 102 |  30 | Zaid       | Khan      |
+| 103 |  28 | Sumit      | Mittal    |
+| 104 |  18 | Gopinathan | Munappy   |
+| 105 |  24 | Romie      | Tingkorou |
+| 106 |  20 | Julia      | Timakova  |
+| 107 |  22 | Intan      | Shafinaz  |
+| 108 |  40 | Nahid      | Reza      |
+| 109 |  35 | Musa       | Abdullah  |
+| 110 |  21 | Zara       | Ali       |
++-----+-----+------------+-----------+
+10 rows in set (0.00 sec)
+
+mysql>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+
+<h2>Welcome to JavaScript</h2>  
+<body>
+<script>  
+document.write("Hello JavaScript by JavaScript");  
+</script>  
+</body>
+<br/>
+<br/>
+<p>******************************************************************************************</p>
+
+   <head>
+      <title>Javascript External Script</title>
+      <script src = "C:/MyJava/javascript.js" type = "text/javascript"/></script>
+   </head>
+   <body>
+      <input type = "button" onclick = "Hello();" name = "ok" value = "Click Me" />
+   </body>
+
+<br/>
+<br/>
+<p>******************************************************************************************</p>
+
+<head>  
+<script type="text/javascript" src="C:/MyJava/javascript.js"></script>  
+</head>  
+<body>  
+<p>Welcome to JavaScript</p>  
+<form>  
+<input type="button" value="Click This Button" onclick="msg()"/>  
+</form>  
+</body>  
+
+<br/>
+<br/>
+<p>******************************************************************************************</p>
+
+<script>  
+var x = 10;  
+var y = 20;  
+var z=x+y;  
+document.write(z);  
+</script>  
+
+<br/>
+<br/>
+<p>******************************************************************************************</p>
+
+<script>  
+var data=200;             //gloabal variable  
+function a(){  
+document.writeln(data);  
+}  
+function b(){  
+document.writeln(data);  
+}  
+a();                              //calling JavaScript function  
+b();  
+</script> 
+
+<script>
+var a=20;  
+if(a>10){  
+document.write("value of a is greater than 10");  
+}  
+</script>  
+
+<br/>
+<br/>
+<p>******************************************************************************************</p>
+
+<body>
+   
+      <script type="text/javascript">
+         <!--
+            var age = 20;
+         
+            if( age > 18 ){
+               document.write("<b>Qualifies for driving</b>");
+            }
+            
+            else{
+               document.write("<b>Does not qualify for driving</b>");
+            }
+         //-->
+      </script>
+      
+      <p>Set the variable to different value and then try...</p>
+   </body>
+
+<br/>
+<br/>
+<p>******************************************************************************************</p>
+  
+<body>
+	<script type="text/javascript">
+         <!--
+            var book = "english";
+            if( book == "history" ){
+               document.write("<b>History Book</b>");
+            }
+		else if( book == "maths" ){
+               document.write("<b>Maths Book</b>");
+            }
+         
+            else if( book == "economics" ){
+               document.write("<b>Economics Book</b>");
+            }
+         
+            else{
+               document.write("<b>Unknown Book</b>");
+            }
+         //-->
+      </script>
+      
+      <p>Set the variable to different value and then try...</p>
+   </body>
+
+<br/>
+<br/>
+<p>******************************************************************************************</p>
+
+<body>
+         <script type="text/javascript">
+         <!--
+            var grade='A';
+            document.write("Entering switch block<br />");
+            switch (grade)
+            {
+               case 'A': document.write("Good job<br />");
+               break;
+		 case 'B': document.write("Pretty good<br />");
+               break;
+               case 'C': document.write("Passed<br />");
+               break;
+               case 'D': document.write("Not so good<br />");
+               break;
+               case 'F': document.write("Failed<br />");
+               break;
+              default:  document.write("Unknown grade<br />")
+            }
+            document.write("Exiting switch block");
+         //-->
+      </script>
+     <p>Set the variable to different value and then try...</p>
+   </body>
+
+<br/>
+<br/>
+<p>******************************************************************************************</p>
+
+<body>
+        <script type="text/javascript">
+         <!--
+            var grade='A';
+            document.write("Entering switch block<br />");
+            switch (grade)
+            {
+               case 'A': document.write("Good job<br />");
+               case 'B': document.write("Pretty good<br />");
+               case 'C': document.write("Passed<br />");
+               case 'D': document.write("Not so good<br />");
+               case 'F': document.write("Failed<br />");
+               default: document.write("Unknown grade<br />")
+            }
+            document.write("Exiting switch block");
+         //-->
+      </script>
+       <p>Set the variable to different value and then try...</p>
+   </body>
+
+<br/>
+<br/>
+<p>******************************************************************************************</p>
+
+<body>
+        <script type="text/javascript">
+         <!--
+            var count = 0;
+            document.write("Starting Loop ");
+            while (count < 10){
+               document.write("Current Count : " + count + "<br />");
+               count++;
+            }
+            document.write("Loop stopped!");
+         //-->
+      </script>
+        <p>Set variable to different value and then try...</p>
+   </body>
+
+<br/>
+<br/>
+<p>******************************************************************************************</p>
+  
+<body>
+   
+      <script type="text/javascript">
+         <!--
+            var count = 0;
+            
+            document.write("Starting Loop" + "<br />");
+            do{
+               document.write("Current Count : " + count + "<br />");
+               count++;
+            }
+            
+            while (count < 5);
+            document.write ("Loop stopped!");
+         //-->
+      </script>
+      
+      <p>Set the variable to different value and then try...</p>
+   </body>
+
+<br/>
+<br/>
+<p>******************************************************************************************</p>
+
+<body>
+         <script type="text/javascript">
+         <!--
+            var aProperty;
+            document.write("Navigator Object Properties<br /> ");
+         
+            for (aProperty in navigator) {
+               document.write(aProperty);
+               document.write("<br />");
+            }
+            document.write ("Exiting from the loop!");
+         //-->
+      </script>
+        <p>Set the variable to different object and then try...</p>
+   </body>
+
+<br/>
+<br/>
+<p>******************************************************************************************</p>
+
+<body>
+         <script type="text/javascript">
+         <!--
+         var x = 1;
+         document.write("Entering the loop<br /> ");
+        
+         while (x < 20)
+         {
+            if (x == 5){
+               break; // breaks out of loop completely
+            }
+            x = x + 1;
+            document.write( x + "<br />");
+         }
+	document.write("Exiting the loop!<br /> ");
+         //-->
+      </script>
+	<p>Set the variable to different value and then try...</p>
+   </body>
+
+<br/>
+<br/>
+<p>******************************************************************************************</p>
+
+<body>
+        <script type="text/javascript">
+         <!--
+            var x = 1;
+            document.write("Entering the loop<br /> ");
+            while (x < 10)
+            {
+               x = x + 1;
+               
+               if (x == 5){
+                  continue; // skip rest of the loop body
+               }
+               document.write( x + "<br />");
+            }
+		document.write("Exiting the loop!<br /> ");
+         //-->
+      </script>
+      <p>Set the variable to different value and then try...</p>
+   </body>
+
+<br/>
+<br/>
+<p>******************************************************************************************</p>
+
+<head>
+        <script type="text/javascript">
+         function sayHello()          {
+            document.write ("Hello there!");
+         }
+      </script>
+      </head>
+   <body>
+      <p>Click the following button to call the function</p>
+        <form>
+         <input type="button" onclick="sayHello()" value="Say Hello">
+      </form>      
+      <p>Use different text in write method and then try...</p>
+   </body>
+
+<br/>
+<br/>
+<p>******************************************************************************************</p>
+
+<head>
+   
+      <script type="text/javascript">
+         function sayHello(name, age)          {
+            document.write (name + " is " + age + " years old.");
+         }
+      </script>
+      
+   </head>
+   <body>
+      <p>Click the following button to call the function</p>
+      
+      <form>
+         <input type="button" onclick="sayHello('Zara', 7)" value="Sila Tekan Di Sini">
+      </form>
+      
+      <p>Use different parameters inside the function and then try...</p>
+   </body>
+
+<br/>
+<br/>
+<p>******************************************************************************************</p>
+
+<head>
+         <script type="text/javascript">
+         function concatenate(first, last) {
+            var full;
+            full = first + last;
+            return full;
+         }
+            function secondFunction()  {
+            var result;
+            result = concatenate('Zara', 'Ali');
+            document.write (result );
+         }
+      </script>
+        </head>
+      <body>
+      <p>Click the following button to call the function</p>
+         <form>
+         <input type="button" onclick="secondFunction()" value="Call Function">
+      </form>
+           <p>Use different parameters inside the function and then try...</p>
+    </body>
+
+</html> 
